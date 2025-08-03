@@ -96,7 +96,7 @@ python app.py
 
 ## 🙋‍♂️ Made by
 
-**Yaswanth** — 1st Gen Engineer | AI/ML Aspirant | Python Developer
+**Yaswanth** — AI/ML Aspirant | Python Developer
 📍 Madurai, Tamil Nadu
 🎓 Thiagarajar College of Engineering
 
