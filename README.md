@@ -9,7 +9,6 @@ This is a simple yet powerful **Sentiment Analysis Web App** built using **BERT 
 > “I’m happy” → ✅ Identified as **Positive** with a score of **0.80**
 
 ![Demo Screenshot](demo.png)
-https://raw.githubusercontent.com/Yaswanth876/Sentiment-Analyzer/refs/heads/main/demo.png?token=GHSAT0AAAAAADGH4MPNMBSATUQPGYLYXKZC2EPSIMQ
 
 ---
 
