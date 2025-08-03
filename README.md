@@ -94,12 +94,6 @@ python app.py
 
 ---
 
-## 📸 UI Preview
-
-*Insert your UI screenshot here (e.g., `demo.png`)*
-
----
-
 ## 🙋‍♂️ Made by
 
 **Yaswanth** — 1st Gen Engineer | AI/ML Aspirant | Python Developer
