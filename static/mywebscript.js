@@ -1,12 +1,12 @@
-let RunSentimentAnalysis = ()=>{
-    textToAnalyze = document.getElementById("textToAnalyze").value;
+function RunSentimentAnalysis() {
+    let textToAnalyze = document.getElementById("textToAnalyze").value;
 
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("system_response").innerHTML = xhttp.responseText;
-        }
-    };
-    xhttp.open("GET", "sentimentAnalyzer?textToAnalyze"+"="+textToAnalyze, true);
-    xhttp.send();
+    fetch(`/sentimentAnalyzer?textToAnalyze=${encodeURIComponent(textToAnalyze)}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("system_response").innerText = data;
+        })
+        .catch(error => {
+            document.getElementById("system_response").innerText = "Error occurred: " + error;
+        });
 }
