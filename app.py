@@ -1,6 +1,4 @@
-# app.py
-
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from SentimentAnalysis.sentiment_analysis import analyze_local_sentiment
 
 # Initialize Flask app
@@ -13,24 +11,14 @@ def render_index_page():
 
 @app.route("/sentimentAnalyzer", methods=["GET"])
 def sentiment_analyzer():
-    '''
-    Receives input text from the frontend, 
-    performs sentiment analysis using a local model,
-    and returns the label and score.
-    '''
+    # Get text input from frontend
     text_to_analyze = request.args.get('textToAnalyze')
 
-    if not text_to_analyze:
-        return "No text provided! Please enter some text.", 400
-
-    # Analyze the sentiment locally
+    # Analyze using local BERT model
     result = analyze_local_sentiment(text_to_analyze)
 
-    # Extract results
-    label = result["label"]
-    score = result["score"]
-
-    return f"The given text has been identified as {label} with a score of {score}."
+    # Return as JSON for front-end JavaScript to style it
+    return jsonify(result)
 
 if __name__ == "__main__":
     '''
