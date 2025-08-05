@@ -24,4 +24,4 @@ if __name__ == "__main__":
     '''
     Runs the Flask app on localhost at port 5000
     '''
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
